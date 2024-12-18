@@ -16,3 +16,25 @@ body {
     box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
     transition: transform 0.1s ease;
 }
+
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b82f6;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+button:hover {
+    background-color: #3b82f6;
+}
+
+input[type="radio"]:checked {
+    background-color: #3b82f6;
+}
