@@ -1,40 +1,197 @@
-/* Custom Galaxy Background */
+/* General Settings */
 body {
-    background: url('../assets/galaxy-bg.jpg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: white;
+}
+
+/* Apply the galaxy background to the whole body */
+body {
+    background: url('assets/galaxy-bg.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Cursor Effect */
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #3498db;
+}
+
+/* Styling the Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Card Section Styling */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .card-content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Grid Layout for the Explore Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Backgrounds for Individual Cards (Cosmology, Astronomy, etc.) */
+#cosmology {
+    background: url('assets/nebula.jpg') no-repeat center center;
+}
+
+#planetary-science {
+    background: url('assets/planet.jpg') no-repeat center center;
+}
+
+#astronomy {
+    background: url('assets/astronomy.jpg') no-repeat center center;
+}
+
+#astrophysics {
+    background: url('assets/stars.jpg') no-repeat center center;
+}
+
+#space-exploration {
+    background: url('assets/space-exploration.jpg') no-repeat center center;
+}
+
+#space-technology {
+    background: url('assets/space-technology.jpg') no-repeat center center;
+}
+
+#astrobiology {
+    background: url('assets/astrobiology.jpg') no-repeat center center;
+}
+
+#space-mythology {
+    background: url('assets/mythology.jpg') no-repeat center center;
+}
+
+#astrophotography {
+    background: url('assets/astrophotography.jpg') no-repeat center center;
+}
+
+#space-environment {
+    background: url('assets/space-environment.jpg') no-repeat center center;
+}
+
+/* Custom Cursor Style */
 #cursor {
-    position: fixed;
-    width: 12px;
-    height: 12px;
-    background-color: #00bcd4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db; /* Blue color for the cursor */
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
-    box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease-in-out;
+    z-index: 9999; /* Ensure the cursor stays on top */
+}
+
+/* Hover effect for buttons and links */
+#cursor.hover {
+    transform: scale(2);
 }
 
 
-button {
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-button:hover {
-    background-color: #3b82f6;
-}
+    .card-content {
+        font-size: 1.2rem;
+    }
 
-.invisible {
-    visibility: hidden;
-}
-
-button:hover {
-    background-color: #3b82f6;
-}
-
-input[type="radio"]:checked {
-    background-color: #3b82f6;
+    button {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+    }
 }
