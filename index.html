@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VishvaKosha: Gateway to Cosmic Knowledge</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body class="bg-black text-white font-sans">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center p-6 bg-black shadow-md">
+        <div class="flex items-center">
+            <img src="assets/logo.png" alt="Logo" class="h-10 w-10">
+            <span class="ml-3 text-2xl font-bold tracking-widest">VishvaKosha</span>
+        </div>
+        <nav>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#" class="hover:text-blue-400 transition">Encyclopedia</a></li>
+                <li><a href="#" class="hover:text-blue-400 transition">News</a></li>
+            </ul>
+        </nav>
+        <div>
+            <input type="text" placeholder="Search..." class="px-4 py-1 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative text-center h-screen flex flex-col justify-center items-center">
+        <h1 class="text-6xl font-extrabold leading-tight">
+            VishvaKosha: <span class="text-blue-400">Gateway</span><br> to Cosmic Knowledge
+        </h1>
+        <p class="mt-4 text-lg max-w-3xl text-gray-400">
+            Explore the wonders of the universe: from particles to galaxies, unravel the mysteries of space and time.
+        </p>
+        <button class="mt-6 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition">
+            Explore
+        </button>
+        <!-- Hero Image -->
+        <img src="assets/galaxy.jpg" alt="Galaxy" class="absolute top-0 left-0 w-full h-screen object-cover opacity-30 -z-10">
+    </section>
+
+    <!-- Encyclopedia Section -->
+    <section class="bg-gray-900 py-16">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-bold text-white">Encyclopedia</h2>
+            <p class="text-gray-400 mt-4">A searchable database of cosmic wonders and space advancements.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+            <!-- Cosmology Card -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img src="assets/nebula.jpg" alt="Cosmology" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <h3 class="text-2xl font-bold text-white">Cosmology</h3>
+                </div>
+            </div>
+            <!-- Planetary Science Card -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img src="assets/planetary.jpg" alt="Planetary Science" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <h3 class="text-2xl font-bold text-white">Planetary Science</h3>
+                </div>
+            </div>
+            <!-- Earth Card -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img src="assets/earth.jpg" alt="Earth" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <h3 class="text-2xl font-bold text-white">Space Exploration</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6 text-center text-gray-400">
+        <p>&copy; 2024 VishvaKosha. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
