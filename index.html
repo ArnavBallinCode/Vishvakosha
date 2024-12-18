@@ -15,6 +15,18 @@
             overflow-x: hidden;
         }
 
+        /* Cursor effect styles */
+        #cursor {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
         .section {
             height: 100vh;
             display: flex;
@@ -22,6 +34,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
         }
 
         .section img {
@@ -62,6 +75,7 @@
             background-color: #2563eb;
         }
 
+        /* Section Backgrounds */
         .section-1 {
             background-image: url('assets/nebula.jpg');
             background-size: cover;
@@ -79,6 +93,24 @@
     </style>
 </head>
 <body class="bg-black">
+
+    <!-- Cursor Effect -->
+    <div id="cursor"></div>
+
+    <!-- Header -->
+    <header class="absolute top-0 w-full p-6 flex justify-between items-center z-50">
+        <div class="flex items-center">
+            <img src="assets/logo.png" alt="Logo" class="h-12 w-12">
+            <span class="ml-4 text-2xl font-bold tracking-widest">VishvaKosha</span>
+        </div>
+        <nav>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#" class="hover:text-blue-400 transition">Encyclopedia</a></li>
+                <li><a href="#" class="hover:text-blue-400 transition">News</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section with Cosmic Introduction -->
     <section class="section section-1">
@@ -181,6 +213,15 @@
     <footer class="bg-black py-6 text-center text-gray-400 mt-12">
         <p>&copy; 2024 VishvaKosha. Discover the Universe.</p>
     </footer>
+
+    <!-- JS for Cursor Effect -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const cursor = document.getElementById('cursor');
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
 
 </body>
 </html>
