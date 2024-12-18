@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VishvaKosha: Gateway to Cosmic Knowledge</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-black text-white font-sans">
+<body class="relative bg-black text-white overflow-hidden">
 
-    <!-- Header Section -->
-    <header class="flex justify-between items-center p-6 bg-black shadow-md">
+    <!-- Cursor Effect -->
+    <div id="cursor"></div>
+
+    <!-- Header -->
+    <header class="absolute top-0 w-full p-6 flex justify-between items-center z-50">
         <div class="flex items-center">
-            <img src="assets/logo.png" alt="Logo" class="h-10 w-10">
-            <span class="ml-3 text-2xl font-bold tracking-widest">VishvaKosha</span>
+            <img src="assets/logo.png" alt="Logo" class="h-12 w-12">
+            <span class="ml-4 text-2xl font-bold tracking-widest">VishvaKosha</span>
         </div>
         <nav>
             <ul class="flex space-x-8 text-lg">
@@ -23,52 +27,44 @@
                 <li><a href="#" class="hover:text-blue-400 transition">News</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="text" placeholder="Search..." class="px-4 py-1 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative text-center h-screen flex flex-col justify-center items-center">
-        <h1 class="text-6xl font-extrabold leading-tight">
-            VishvaKosha: <span class="text-blue-400">Gateway</span><br> to Cosmic Knowledge
+    <section class="h-screen flex flex-col justify-center items-center text-center relative">
+        <h1 class="text-6xl font-extrabold leading-snug drop-shadow-2xl">
+            Welcome to <span class="text-blue-400">VishvaKosha</span><br>Your Cosmic Knowledge Gateway
         </h1>
-        <p class="mt-4 text-lg max-w-3xl text-gray-400">
-            Explore the wonders of the universe: from particles to galaxies, unravel the mysteries of space and time.
+        <p class="mt-4 text-lg max-w-3xl text-gray-300">
+            Explore galaxies, stars, and cosmic phenomena as we guide you through the universe's wonders.
         </p>
-        <button class="mt-6 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition">
-            Explore
+        <button class="mt-6 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition duration-300">
+            Start Exploring
         </button>
-        <!-- Hero Image -->
-        <img src="assets/galaxy.jpg" alt="Galaxy" class="absolute top-0 left-0 w-full h-screen object-cover opacity-30 -z-10">
     </section>
 
-    <!-- Encyclopedia Section -->
-    <section class="bg-gray-900 py-16">
-        <div class="text-center mb-10">
-            <h2 class="text-4xl font-bold text-white">Encyclopedia</h2>
-            <p class="text-gray-400 mt-4">A searchable database of cosmic wonders and space advancements.</p>
-        </div>
+    <!-- Galaxy-Themed Cards -->
+    <section class="py-16 bg-gray-900">
+        <h2 class="text-4xl font-bold text-center mb-8">Explore the Cosmos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
-            <!-- Cosmology Card -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="assets/nebula.jpg" alt="Cosmology" class="w-full h-64 object-cover">
+            <!-- Card 1 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="assets/nebula.jpg" alt="Nebula" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h3 class="text-2xl font-bold text-white">Cosmology</h3>
+                    <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Nebulas</h3>
                 </div>
             </div>
-            <!-- Planetary Science Card -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="assets/planetary.jpg" alt="Planetary Science" class="w-full h-64 object-cover">
+            <!-- Card 2 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="assets/planet.jpg" alt="Planet" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h3 class="text-2xl font-bold text-white">Planetary Science</h3>
+                    <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Planets</h3>
                 </div>
             </div>
-            <!-- Earth Card -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="assets/earth.jpg" alt="Earth" class="w-full h-64 object-cover">
+            <!-- Card 3 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="assets/galaxy-bg.jpg" alt="Galaxies" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h3 class="text-2xl font-bold text-white">Space Exploration</h3>
+                    <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Galaxies</h3>
                 </div>
             </div>
         </div>
@@ -76,10 +72,10 @@
 
     <!-- Footer -->
     <footer class="bg-black py-6 text-center text-gray-400">
-        <p>&copy; 2024 VishvaKosha. All rights reserved.</p>
+        <p>&copy; 2024 VishvaKosha. Discover the Universe.</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- JS -->
+    <script src="js/cursor.js"></script>
 </body>
 </html>
