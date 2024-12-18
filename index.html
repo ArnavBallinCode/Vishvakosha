@@ -13,6 +13,7 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
+            background-color: black;
         }
 
         /* Cursor effect styles */
@@ -27,6 +28,7 @@
             transition: transform 0.1s ease;
         }
 
+        /* General Section Styles */
         .section {
             height: 100vh;
             display: flex;
@@ -35,6 +37,7 @@
             align-items: center;
             text-align: center;
             position: relative;
+            color: white;
         }
 
         .section img {
@@ -79,16 +82,35 @@
         .section-1 {
             background-image: url('assets/nebula.jpg');
             background-size: cover;
+            background-position: center;
         }
 
         .section-2 {
             background-image: url('assets/planet.jpg');
             background-size: cover;
+            background-position: center;
         }
 
         .section-3 {
             background-image: url('assets/astronomy.jpg');
             background-size: cover;
+            background-position: center;
+        }
+
+        /* Adjust for responsive layout */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+
+            .explore-button {
+                font-size: 1rem;
+                padding: 12px 30px;
+            }
         }
     </style>
 </head>
@@ -101,10 +123,10 @@
     <header class="absolute top-0 w-full p-6 flex justify-between items-center z-50">
         <div class="flex items-center">
             <img src="assets/logo.png" alt="Logo" class="h-12 w-12">
-            <span class="ml-4 text-2xl font-bold tracking-widest">VishvaKosha</span>
+            <span class="ml-4 text-2xl font-bold tracking-widest text-white">VishvaKosha</span>
         </div>
         <nav>
-            <ul class="flex space-x-8 text-lg">
+            <ul class="flex space-x-8 text-lg text-white">
                 <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
                 <li><a href="#" class="hover:text-blue-400 transition">Encyclopedia</a></li>
                 <li><a href="#" class="hover:text-blue-400 transition">News</a></li>
@@ -121,8 +143,8 @@
 
     <!-- Cosmology Section -->
     <section class="section section-2">
-        <h2 class="section-title text-white">Cosmology</h2>
-        <p class="section-description text-white">Understand the structure and origins of the universe.</p>
+        <h2 class="section-title">Cosmology</h2>
+        <p class="section-description">Understand the structure and origins of the universe.</p>
         <a href="pages/cosmology.html">
             <button class="explore-button">Explore Cosmology</button>
         </a>
@@ -130,8 +152,8 @@
 
     <!-- Planetary Science Section -->
     <section class="section section-1">
-        <h2 class="section-title text-white">Planetary Science</h2>
-        <p class="section-description text-white">Discover the science behind planets and their formation.</p>
+        <h2 class="section-title">Planetary Science</h2>
+        <p class="section-description">Discover the science behind planets and their formation.</p>
         <a href="pages/planetary-science.html">
             <button class="explore-button">Explore Planetary Science</button>
         </a>
@@ -139,8 +161,8 @@
 
     <!-- Astronomy Section -->
     <section class="section section-3">
-        <h2 class="section-title text-white">Astronomy</h2>
-        <p class="section-description text-white">Explore the study of celestial objects and phenomena.</p>
+        <h2 class="section-title">Astronomy</h2>
+        <p class="section-description">Explore the study of celestial objects and phenomena.</p>
         <a href="pages/astronomy.html">
             <button class="explore-button">Explore Astronomy</button>
         </a>
@@ -148,8 +170,8 @@
 
     <!-- Astrophysics Section -->
     <section class="section section-2">
-        <h2 class="section-title text-white">Astrophysics</h2>
-        <p class="section-description text-white">Delve into the physics of the universe, including stars, black holes, and more.</p>
+        <h2 class="section-title">Astrophysics</h2>
+        <p class="section-description">Delve into the physics of the universe, including stars, black holes, and more.</p>
         <a href="pages/astrophysics.html">
             <button class="explore-button">Explore Astrophysics</button>
         </a>
@@ -157,8 +179,8 @@
 
     <!-- Space Exploration Section -->
     <section class="section section-1">
-        <h2 class="section-title text-white">Space Exploration</h2>
-        <p class="section-description text-white">Learn about the missions and technologies used to explore outer space.</p>
+        <h2 class="section-title">Space Exploration</h2>
+        <p class="section-description">Learn about the missions and technologies used to explore outer space.</p>
         <a href="pages/space-exploration.html">
             <button class="explore-button">Explore Space Exploration</button>
         </a>
@@ -166,8 +188,8 @@
 
     <!-- Space Technology Section -->
     <section class="section section-3">
-        <h2 class="section-title text-white">Space Technology</h2>
-        <p class="section-description text-white">Discover the technology behind space missions and innovation.</p>
+        <h2 class="section-title">Space Technology</h2>
+        <p class="section-description">Discover the technology behind space missions and innovation.</p>
         <a href="pages/space-technology.html">
             <button class="explore-button">Explore Space Technology</button>
         </a>
@@ -175,8 +197,8 @@
 
     <!-- Astrobiology Section -->
     <section class="section section-2">
-        <h2 class="section-title text-white">Astrobiology</h2>
-        <p class="section-description text-white">Study the potential for life on other planets.</p>
+        <h2 class="section-title">Astrobiology</h2>
+        <p class="section-description">Study the potential for life on other planets.</p>
         <a href="pages/astrobiology.html">
             <button class="explore-button">Explore Astrobiology</button>
         </a>
@@ -184,8 +206,8 @@
 
     <!-- Space in Mythology Section -->
     <section class="section section-1">
-        <h2 class="section-title text-white">Space in Mythology</h2>
-        <p class="section-description text-white">Explore myths and legends related to the cosmos.</p>
+        <h2 class="section-title">Space in Mythology</h2>
+        <p class="section-description">Explore myths and legends related to the cosmos.</p>
         <a href="pages/space-mythology.html">
             <button class="explore-button">Explore Space in Mythology</button>
         </a>
@@ -193,8 +215,8 @@
 
     <!-- Astrophotography Section -->
     <section class="section section-3">
-        <h2 class="section-title text-white">Astrophotography</h2>
-        <p class="section-description text-white">Discover the art and science of capturing the universe's beauty.</p>
+        <h2 class="section-title">Astrophotography</h2>
+        <p class="section-description">Discover the art and science of capturing the universe's beauty.</p>
         <a href="pages/astrophotography.html">
             <button class="explore-button">Explore Astrophotography</button>
         </a>
@@ -202,8 +224,8 @@
 
     <!-- Space Environment Section -->
     <section class="section section-2">
-        <h2 class="section-title text-white">Space Environment</h2>
-        <p class="section-description text-white">Learn about the environment of outer space, including radiation, microgravity, and more.</p>
+        <h2 class="section-title">Space Environment</h2>
+        <p class="section-description">Learn about the environment of outer space, including radiation, microgravity, and more.</p>
         <a href="pages/space-environment.html">
             <button class="explore-button">Explore Space Environment</button>
         </a>
