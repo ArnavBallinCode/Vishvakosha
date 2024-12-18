@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrobiology - VishvaKosha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-cover bg-center" style="background-image: url('../assets/astrobiology-bg.jpg');">
+
+    <!-- Header -->
+    <header class="absolute top-0 w-full p-6 flex justify-between items-center z-50">
+        <div class="flex items-center">
+            <img src="../assets/logo.png" alt="Logo" class="h-12 w-12">
+            <span class="ml-4 text-2xl font-bold tracking-widest">VishvaKosha</span>
+        </div>
+        <nav>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="../index.html" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="../pages/astrobiology.html" class="hover:text-blue-400 transition">Astrobiology</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Astrobiology Content Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center relative text-white">
+        <h1 class="text-6xl font-extrabold leading-snug drop-shadow-2xl">Astrobiology</h1>
+        <p class="mt-4 text-lg max-w-3xl text-gray-300">
+            Explore the science of life in space and the potential for life on other planets.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Astrobiology" class="mt-6 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition duration-300">Learn More on Wikipedia</a>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="py-16 bg-black text-center text-gray-400">
+        <h2 class="text-4xl font-bold text-white mb-8">Astrobiology Quiz</h2>
+        <form action="#" method="post">
+            <label class="block text-xl mb-4 text-white">
+                What is the primary focus of astrobiology?
+                <input type="radio" name="question1" value="A" class="ml-4"> Study of life on Earth
+                <input type="radio" name="question1" value="B" class="ml-4"> Study of extraterrestrial life
+            </label>
+            <button type="submit" class="mt-4 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition duration-300">Submit Answer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6 text-center text-gray-400">
+        <p>&copy; 2024 VishvaKosha. Discover the Universe.</p>
+    </footer>
+
+</body>
+</html>
