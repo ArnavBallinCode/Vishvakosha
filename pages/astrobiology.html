@@ -4,51 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astrobiology - VishvaKosha</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body class="bg-cover bg-center" style="background-image: url('../assets/astrobiology-bg.jpg');">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            background-color: #000;
+            color: white;
+        }
 
-    <!-- Header -->
-    <header class="absolute top-0 w-full p-6 flex justify-between items-center z-50">
-        <div class="flex items-center">
-            <img src="../assets/logo.png" alt="Logo" class="h-12 w-12">
-            <span class="ml-4 text-2xl font-bold tracking-widest">VishvaKosha</span>
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .quiz {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .quiz button {
+            background: linear-gradient(90deg, #2563eb, #1e40af);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quiz button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+        }
+
+        /* Buttons for external links */
+        .external-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .external-links a {
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #4f46e5, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .external-links a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section Header -->
+    <header class="fixed top-0 w-full p-4 z-50 bg-black bg-opacity-80 backdrop-blur-md">
+        <div class="flex justify-between items-center px-8">
+            <a href="index.html" class="text-2xl font-bold text-blue-400">VishvaKosha</a>
+            <nav>
+                <ul class="flex space-x-8 text-lg">
+                    <li><a href="cosmology.html" class="hover:text-blue-400 transition">Cosmology</a></li>
+                    <li><a href="astrobiology.html" class="hover:text-blue-400 transition">Astrobiology</a></li>
+                    <li><a href="astronomy.html" class="hover:text-blue-400 transition">Astronomy</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="flex space-x-8 text-lg">
-                <li><a href="../index.html" class="hover:text-blue-400 transition">Home</a></li>
-                <li><a href="../pages/astrobiology.html" class="hover:text-blue-400 transition">Astrobiology</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Astrobiology Content Section -->
-    <section class="h-screen flex flex-col justify-center items-center text-center relative text-white">
-        <h1 class="text-6xl font-extrabold leading-snug drop-shadow-2xl">Astrobiology</h1>
-        <p class="mt-4 text-lg max-w-3xl text-gray-300">
-            Explore the science of life in space and the potential for life on other planets.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Astrobiology" class="mt-6 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition duration-300">Learn More on Wikipedia</a>
-    </section>
+    <!-- Main Content -->
+    <section class="section" style="background-image: url('assets/astrobiology.jpg');">
+        <h1 class="text-4xl font-extrabold">Astrobiology</h1>
+        <p class="text-lg mt-4 max-w-3xl">Astrobiology is the study of the origin, evolution, distribution, and future of life in the universe. It combines elements of biology, astronomy, and geology to investigate whether extraterrestrial life exists.</p>
 
-    <!-- Quiz Section -->
-    <section class="py-16 bg-black text-center text-gray-400">
-        <h2 class="text-4xl font-bold text-white mb-8">Astrobiology Quiz</h2>
-        <form action="#" method="post">
-            <label class="block text-xl mb-4 text-white">
-                What is the primary focus of astrobiology?
-                <input type="radio" name="question1" value="A" class="ml-4"> Study of life on Earth
-                <input type="radio" name="question1" value="B" class="ml-4"> Study of extraterrestrial life
-            </label>
-            <button type="submit" class="mt-4 px-6 py-2 bg-blue-500 text-black font-semibold rounded hover:bg-blue-400 transition duration-300">Submit Answer</button>
-        </form>
+        <!-- External Links -->
+        <div class="external-links">
+            <a href="https://en.wikipedia.org/wiki/Astrobiology" target="_blank">Learn on Wikipedia</a>
+            <a href="math.html" target="_blank">Mathematics Behind</a>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz mt-12">
+            <h2 class="text-xl font-bold">Astrobiology Quiz</h2>
+            <p class="mt-4">What is the primary focus of astrobiology?</p>
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="answer" value="1"> The study of planets and stars
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="2"> The study of the future of Earth
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="3"> The search for extraterrestrial life
+                </label><br>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+            <p id="quiz-result" class="mt-4"></p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-6 text-center text-gray-400">
-        <p>&copy; 2024 VishvaKosha. Discover the Universe.</p>
+    <footer class="mt-12 p-6 text-center text-gray-400">
+        <p>&copy; 2024 VishvaKosha. Explore the Cosmos.</p>
     </footer>
 
+    <!-- JavaScript -->
+    <script>
+        function submitQuiz() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            const result = document.getElementById('quiz-result');
+            if (!selectedAnswer) {
+                result.textContent = "Please select an answer!";
+                result.style.color = "orange";
+                return;
+            }
+
+            const correctAnswer = "3";
+            if (selectedAnswer.value === correctAnswer) {
+                result.textContent = "Correct! Astrobiology primarily focuses on the search for extraterrestrial life.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Wrong! The correct answer is: The search for extraterrestrial life.";
+                result.style.color = "red";
+            }
+        }
+    </script>
 </body>
 </html>
